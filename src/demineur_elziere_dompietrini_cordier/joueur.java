@@ -10,4 +10,12 @@ package demineur_elziere_dompietrini_cordier;
  */
 public class joueur {
     
+    private String nomJoueur;
+    private int kit ;
+    private int pointvie;
+    
+    public joueur(String joueur1){
+        this.nomJoueur
+    }
+    
 }
