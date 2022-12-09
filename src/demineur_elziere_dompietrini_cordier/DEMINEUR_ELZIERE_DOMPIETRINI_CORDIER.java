@@ -15,7 +15,7 @@ public class DEMINEUR_ELZIERE_DOMPIETRINI_CORDIER {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        hello!
+        
     }
     
 }
