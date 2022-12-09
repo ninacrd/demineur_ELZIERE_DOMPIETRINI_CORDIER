@@ -46,7 +46,16 @@ public class plateauDeJeu {
         Grille[i][j].placer_Kit();
     }
     
-    public void placer_drapeau(int i, int j){ /*permet au joueur de placer des drapeaux s'il pense qu'il y a une bombe*/{
-        Grille[i][j].drapeau;
+    public void placer_drapeau(int i, int j){ /*permet au joueur de placer des drapeaux s'il pense qu'il y a une bombe*/
+        Grille[i][j].placer_drapeau();
     }    
+    
+    public void supprimer_drapeau(int i, int j){
+        Grille[i][j].supprimer_drapeau();
+    }
+    
+    public int nombre_bombes_voisines(int i, int j){
+        int p = Grille[i][j].nombre_bombes();
+        return p;
+    }
 }
