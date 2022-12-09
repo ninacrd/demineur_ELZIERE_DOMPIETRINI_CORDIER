@@ -11,9 +11,9 @@ package demineur_elziere_dompietrini_cordier;
 public class grille {
     /*creation d'une nouvelle classe*/
 
-    private boolean presence_bombe;
-    private boolean presence_Kit;
-    private boolean drapeau;
+    public boolean presence_bombe;
+    public boolean presence_Kit;
+    public boolean drapeau;
     public int nombre_bombes;
     
     public grille(){ /*initialisation des attributs*/
