@@ -89,7 +89,7 @@ public class grille {
     }
     
     public void placer_Kit(){
-        presence_Kit = true;
+        presence_Kit = true; /*il y a bien un kit dans la cellule*/
     }
     
     public void placer_drapeau(){ /*permet de placer un drapeau à l'endroit où le joueur pense qu'il y a une bombe*/
@@ -98,6 +98,22 @@ public class grille {
     
     public void supprimer_drapeau(){
         drapeau = false;
+    }
+    
+    public void supprimer_Kit(){
+        presence_Kit = false; /*il n'y en aura plus dans la cellule*/
+    }
+    
+    public void activer_Kit(){
+        supprimer_Kit(); /*si on active un kit alors on le supprimer*/
+    }
+    
+    public void utilisation_Kit(){ /*on utilisera cette méthode pour afficher la bonne image si le joueur utilise un kit*/
+        kit_active = true;
+    }
+    
+    public void explosion(){ /*méthode qu'on utilisera pour afficher la bonne image*/
+        bombe_activee = true;
     }
     
     public int nombre_bombes(){
