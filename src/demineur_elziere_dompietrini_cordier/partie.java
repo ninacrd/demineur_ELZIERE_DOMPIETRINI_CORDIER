@@ -54,7 +54,7 @@ public class partie {
             /* création d'un menu avec plusieurs choix possible*/
             System.out.println(joueurCourant.nom + ", que voulez vous faire?");
             System.out.println("1 - Déminer");
-            System.out.println("2 - Placer un drapeau"); /*s'il pense avoir trouvé une bombe*/
+            System.out.println("2 - Placer ou supprimer un drapeau"); /*s'il pense avoir trouvé une bombe*/
             System.out.println("3 - Utiliser un kit");
             System.out.println("Veuillez entrer le chiffre correspondant à l'action voulue :");
             choix_joueur = saisie_joueur.nextInt();
@@ -67,6 +67,34 @@ public class partie {
             
             if (choix_joueur == 1) {
                 /*s'il choisi 1 il veut cliquer sur une case et la déminer*/
+                System.out.println("Dans quelle colonne souhaitez vous jouer ?");
+                int colonne = saisie_joueur.nextInt();
+                System.out.println("Dans quelle ligne souhaitez vous jouer ?");
+                int ligne = saisie_joueur.nextInt();
+            }
+            
+            if (choix_joueur == 2){
+                System.out.println("Dans quelle colonne souhaitez vous jouer ?");
+                int colonne = saisie_joueur.nextInt();
+                System.out.println("Dans quelle ligne souhaitez vous jouer ?");
+                int ligne = saisie_joueur.nextInt();
+                
+                boolean presence = plateau.presence_drapeau(ligne, colonne); /*on regarde s'il y a déjà un drapeau*/
+                if (presence == true){
+                    plateau.supprimer_drapeau(ligne,colonne);
+                } else {
+                    plateau.placer_drapeau(ligne, colonne);
+                }
+            }
+            
+            if (choix_joueur == 3){
+                System.out.println("Dans quelle colonne souhaitez vous jouer ?");
+                int colonne = saisie_joueur.nextInt();
+                System.out.println("Dans quelle ligne souhaitez vous jouer ?");
+                int ligne = saisie_joueur.nextInt();
+                
+                
+            }
         }
     }
 }
