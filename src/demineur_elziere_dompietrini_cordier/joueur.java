@@ -11,28 +11,32 @@ package demineur_elziere_dompietrini_cordier;
 public class joueur {
     
     public String nom;
-    private int kit ;
-    private int pointvie;
+    private int nb_kit ;
+    private int point_vie;
     
-    public joueur(String nom_joueur){
+    public joueur(String nom_joueur){ /*constructeur de la classe*/
         nom = nom_joueur;
-        kit = 0;
-        pointvie= 3;
+        nb_kit = 0;
+        point_vie= 3;
     }
-    public void avoirKit(){
-        kit= kit+1;
+    public void avoirKit(){ /*méthode pour ajouter un kit de déminage*/
+        nb_kit = nb_kit+1;
     }
     
-    public void utiliserKit(){
-        kit = kit-1;
+    public void utiliserKit(){ /*méthode pour utiliser, enlever un kit de déminage*/
+        nb_kit = nb_kit-1;
     }
            
-    public int nombreVie(){
-        return (pointvie);
+    public int getPointVie(){ /*on crée un getter pour le nombre de point de vie*/
+        return point_vie;
+    }
+    
+    public int getKit(){ /*on crée un getter pour le nombre de kit*/
+        return nb_kit;
     }
      
     public int défaite(){
-        pointvie= pointvie-1;
-        return pointvie;
+        point_vie = point_vie-1;
+        return point_vie;
     }
 }

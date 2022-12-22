@@ -46,6 +46,11 @@ public class plateauDeJeu {
         Grille[i][j].placer_Kit();
     }
     
+    public boolean presence_drapeau(int i, int j){
+        boolean p = Grille[i][j].presence_Kit; /*on regarde si on a un kit*/
+        return p;
+    }
+    
     public void placer_drapeau(int i, int j){ /*permet au joueur de placer des drapeaux s'il pense qu'il y a une bombe*/
         Grille[i][j].placer_drapeau();
     }    
