@@ -4,6 +4,9 @@
  */
 package demineur_elziere_dompietrini_cordier;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  *
  * @author odomp
@@ -161,7 +164,7 @@ public class interfacejeu extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nbKitsRestants)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 41, -1, 57));

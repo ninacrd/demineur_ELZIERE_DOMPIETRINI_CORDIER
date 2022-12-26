@@ -15,7 +15,14 @@ public class DEMINEUR_ELZIERE_DOMPIETRINI_CORDIER {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        joueur J1 = new joueur("Nina");
+
+        partie game = new partie(J1);   
+
+        game.initialiserPartie();
+
+        game.plateau.afficherGrilleSurConsole();
+        game.lancerPartie();
     }
     
 }

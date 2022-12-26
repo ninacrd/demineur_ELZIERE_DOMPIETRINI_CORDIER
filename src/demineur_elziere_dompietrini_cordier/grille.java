@@ -8,7 +8,7 @@ package demineur_elziere_dompietrini_cordier;
  *
  * @author odomp
  */
-public class grille {
+public class grille { /*équivalent à cellule de grille du puissance 4*/
     /*creation d'une nouvelle classe*/
 
     public boolean presence_bombe; 
@@ -17,47 +17,20 @@ public class grille {
     public boolean kit_active;
     public boolean drapeau;
     public boolean nb_vie;
-    public int nb_bombes;
-    public boolean bombe0; /*représente le nombre de bombes a proximité qui s'affichera lorsqu'on touche une case vide*/
-    public boolean bombe1;
-    public boolean bombe2;
-    public boolean bombe3;
-    public boolean bombe4;
+    public int nb_bombes = 99;
+
+    public int getNb_bombes() {
+        return nb_bombes;
+    }
     
     
     public grille(){ /*initialisation des attributs*/
-        bombe0 = false;
-        bombe1 = false;
-        bombe2 = false;
-        bombe3 = false;
-        bombe4 = false;
         presence_bombe = false; 
         bombe_activee = false;
         presence_Kit = false;
         kit_active = false;
         drapeau = false;
         nb_vie = true; /*car le joueur débute avec 3 vies*/
-    }
-    
-    /*on passe tous les attributs bombe0, bombe1 ... à true ce qui permettra d'afficher le bon nombre en fonction du nombre de bombe à côté de la case jouée*/
-    public void bombe0(){
-        bombe0 = true;
-    }
-    
-    public void bombe1(){
-        bombe1 = true;
-    }
-    
-    public void bombe2(){
-        bombe2 = true;
-    }
-    
-    public void bombe3(){
-        bombe3 = true;
-    }
-    
-    public void bombe4(){
-        bombe4 = true;
     }
     
     public boolean presence_bombe(){ /*méthode qui permettra de vérifier la présence ou non d'une bombe dans la case et retourne un booléen*/
@@ -114,10 +87,6 @@ public class grille {
     
     public void explosion(){ /*méthode qu'on utilisera pour afficher la bonne image*/
         bombe_activee = true;
-    }
-    
-    public int nombre_bombes(){
-        return nb_bombes;
     }
     
 }

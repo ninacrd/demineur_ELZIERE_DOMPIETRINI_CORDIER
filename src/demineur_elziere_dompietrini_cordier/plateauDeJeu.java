@@ -4,6 +4,8 @@
  */
 package demineur_elziere_dompietrini_cordier;
 
+import java.util.Random;
+
 /**
  *
  * @author odomp
@@ -21,10 +23,9 @@ public class plateauDeJeu {
     
     public void afficherGrilleSurConsole(){
         for (int i = 0; i < 16 ; i++){
-            for (int j = 0; j < 30 ; i++){
+            for (int j = 0; j < 30 ; j++){
                 System.out.print(Grille[i][j]);
             }
-            System.out.println();
         }
     }
     

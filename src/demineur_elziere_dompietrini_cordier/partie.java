@@ -12,22 +12,22 @@ import java.util.Scanner;
  * @author odomp
  */
 public class partie {
-    private plateauDeJeu plateau;
     private joueur joueurCourant;
     
+    plateauDeJeu plateau = new plateauDeJeu();
+    
     public partie(joueur J1){
-        joueurCourant = J1; /*on initialise le joueur courant (il n'y en a qu'un*/
+        joueurCourant = J1; /*on initialise le joueur courant il n'y en a qu'un*/
     }
     
-    public void placerBombe(int nb){ /*nombre de bombe que le joueur veut placer*/
+    public void placerBombe(int nb_bombes){ /*nombre de bombe que le joueur veut placer*/               
         Random generateurAleat = new Random ();
-        
         int b = 0; /*nombre de bombe entré initialement*/
-        while (b < nb){
-            int i = generateurAleat.nextInt(); /*permettra de placer les bombes dans une ligne aléatoire*/
-            int j = generateurAleat.nextInt(); /*génère une colonne aléatoirement*/
-            if (plateau.presence_bombe(i, j)==false){
-                plateau.placer_bombe(i, j); /*s'il n'y a pas de bombe sur la case choisie aléatoirement on en place une*/
+        while (b != nb_bombes){
+            int i = generateurAleat.nextInt(16); /*permettra de placer les bombes dans une ligne aléatoire*/
+            int j = generateurAleat.nextInt(30); /*génère une colonne aléatoirement*/
+            if (plateau.presence_bombe(i,j)==false){
+                plateau.placer_bombe(i,j); /*s'il n'y a pas de bombe sur la case choisie aléatoirement on en place une*/
                 b += 1;
             } 
         } 
@@ -40,9 +40,9 @@ public class partie {
         String nom_joueur = saisie_joueur.nextLine(); /*on lui demande de rentrer son nom*/
         joueur joueur = new joueur(nom_joueur);
         
-        System.out.println("Combien de bombe voulez vous placer ? ");
-        int nb_bombe = saisie_joueur.nextInt(); /*on lui demande combien de bombre il veut placer*/
-        placerBombe(nb_bombe);
+        //System.out.println("Combien de bombe voulez vous placer ? ");
+        //int nb_bombe = saisie_joueur.nextInt(); /*on lui demande combien de bombre il veut placer*/
+        //placerBombe(nb_bombe);
     }
     
     public void lancerPartie(){ /*méthode qui permet de lancer la partie*/
